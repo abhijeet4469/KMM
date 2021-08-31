@@ -9,3 +9,4 @@ pluginManagement {
 rootProject.name = "Kmm"
 include(":androidApp")
 include(":shared")
+include(":Capture")
