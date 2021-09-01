@@ -7,10 +7,14 @@ plugins {
     id("maven-publish")
 }
 
-version = "0.0.3"
+version = "0.0.4"
+group = "io.github.abhijeet4469"
 
 kotlin {
-    android()
+    //android()
+    android {
+        publishLibraryVariants("release", "debug")
+    }
 
     val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget = when {
         System.getenv("SDK_NAME")?.startsWith("iphoneos") == true -> ::iosArm64
